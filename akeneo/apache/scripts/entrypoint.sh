@@ -44,7 +44,7 @@ if [ "$DO_INIT_AKENEO" = "yes" ]; then
 	}
 
 	echo 'Download akeneo ...'
-	: ${AKENEO_URL:="http://download.akeneo.com/pim-community-standard-v1.6-latest.tar.gz"}
+	: ${AKENEO_URL:="http://download.akeneo.com/pim-community-standard-v1.7-latest.tar.gz"}
 	curl -L -s "$AKENEO_URL" | tar xzf - --directory /var/www/html --strip-components 1
 	
 	cd /var/www/html
