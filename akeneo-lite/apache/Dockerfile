@@ -1,6 +1,6 @@
 # Akeneo Web
 FROM debian:jessie
-MAINTAINER s7b4 <baron.stephane@gmail.com>
+LABEL maintainer "s7b4 <baron.stephane@gmail.com>"
 
 # Base + Akeneo requirements
 RUN apt-get update \
