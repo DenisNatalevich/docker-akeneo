@@ -24,7 +24,7 @@
 	    - /var/www/html
 
 	web:
-	  image: s7b4/akeneo:web
+	  image: s7b4/akeneo-front
 	  links:
 	    - php
 	  ports:
@@ -34,7 +34,7 @@
 	    - data:ro
 
 	php:
-	  image: s7b4/akeneo:php
+	  image: s7b4/akeneo
 	  links:
 	    - mysql
 	    - indexer
