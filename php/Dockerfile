@@ -50,10 +50,12 @@ RUN php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php')
 	&& php -f /tmp/composer-setup.php -- --quiet --filename=composer --install-dir=/usr/local/bin \
 	&& rm /tmp/composer-setup.php
 
-COPY resources/install-akeneo.sh /opt/install-akeneo.sh
-COPY resources/entrypoint.sh /entrypoint.sh
+# Scripts
+RUN mkdir /opt/cron-scripts
+COPY resources/*.sh /opt/
+COPY resources/cron-scripts /opt/cron-scripts
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/opt/entrypoint.sh"]
 
 VOLUME /var/www/html
 
